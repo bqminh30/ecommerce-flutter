@@ -1,4 +1,5 @@
 import 'package:ecommerceflutter/controller/dashboard_controller.dart';
+import 'package:ecommerceflutter/view/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class DashboardScreen extends StatelessWidget {
                 child: IndexedStack(
                   index: controller.tabIndex,
                   children: [
-                    Container(),
+                    const HomeScreen(),
                     Container(
                       color: Colors.red,
                     ),
@@ -37,8 +38,8 @@ class DashboardScreen extends StatelessWidget {
                 child: SnakeNavigationBar.color(
                   behaviour: SnakeBarBehaviour.floating,
                   snakeShape: SnakeShape.circle,
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  unselectedLabelStyle: TextStyle(fontSize: 11),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  unselectedLabelStyle: const TextStyle(fontSize: 11),
                   snakeViewColor: Theme.of(context).primaryColor,
                   unselectedItemColor: Theme.of(context).colorScheme.secondary,
                   showUnselectedLabels: true,
